@@ -8,9 +8,17 @@
 <!--    <link rel="stylesheet" href="style.css">-->
   </head>
   <body>
-    <h1>This is the blogs page</h1>
-    <br><br><br>
-
+  <header>
+      <h1><a href="/">Django Girls Blog</a></h1>
+  </header>
+  <br><br><br>
+  {% for post in posts %}
+      <article>
+          <time>published: {{ post.published_date }}</time>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</p>
+      </article>
+  {% endfor %}
 
   </body>
 </html>
