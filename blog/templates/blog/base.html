@@ -10,6 +10,9 @@
     <body>
     <header class="page-header">
       <div class="container">
+          {% if user.is_authenticated %}
+          <button><i class="bi bi-plus"><a href="{% url 'post_new' %}">Add Post</a></i></button>
+          {% endif %}
           <h1><a href="">Django Blog</a></h1>
       </div>
     </header>
